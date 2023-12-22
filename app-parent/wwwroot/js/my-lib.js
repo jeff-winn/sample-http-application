@@ -1,7 +1,7 @@
 window.onload = () => {
     const msg = {
-        type: 'hello',
-        value: 'world'
+        type: 'loaded',
+        url: window.location.toString()
     };
 
     parent.postMessage(msg, '*');
