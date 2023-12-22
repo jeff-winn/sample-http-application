@@ -1,0 +1,15 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <iframe src="http://localhost:4200"></iframe>
+        <script type="text/javascript">
+            window.addEventListener('message', (e) => {
+                const msg = e.data;
+
+                console.log('Hello World!');
+                console.log(msg);
+            });
+        </script>
+    </body>
+</html>

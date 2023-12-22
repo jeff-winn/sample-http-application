@@ -1,0 +1,33 @@
+{
+    "tasks": [
+        {
+            "label": "build: app-parent",
+            "type": "npm",
+            "script": "build",
+            "path": "app-parent",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "build: app-child",
+            "type": "npm",
+            "script": "start",
+            "isBackground": true,
+            "path": "app-child",
+            "group": "build",
+            "problemMatcher": {
+              "owner": "typescript",
+              "pattern": "$tsc",
+              "background": {
+                "activeOnStart": true,
+                "beginsPattern": {
+                  "regexp": "(.*?)"
+                },
+                "endsPattern": {
+                  "regexp": "bundle generation complete"
+                }
+              }
+            }
+        }
+    ]
+}
